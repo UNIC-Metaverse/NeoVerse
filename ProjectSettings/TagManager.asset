@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - InvisibleForLocalPlayer
+  - Water
+  - UI
+  - Locomotion
+  - Finger
+  - FingerOnlyUI
+  - NonBeamable
+  - StencilBuffer_Layer_1
+  - StencilBuffer_Layer_2
+  - RealTimeSensitiveObjects
+  - ForbiddenLocomotion
+  - Board
+  - PenLine
+  - BoardPenLine
+  - LineHandle
+  - InvisibleToRecording
+  - MouseDetection
+  - ReceiverScreen
+  - Magnets
+  - StickyNotes
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0

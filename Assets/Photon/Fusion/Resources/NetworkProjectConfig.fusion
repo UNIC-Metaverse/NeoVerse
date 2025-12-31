@@ -1,0 +1,68 @@
+{
+    "Version": 1,
+    "TypeId": "NetworkProjectConfig",
+    "PeerMode": 0,
+    "LagCompensation": {
+        "Enabled": false,
+        "HitboxBufferLengthInMs": 200,
+        "HitboxDefaultCapacity": 512,
+        "CachedStaticCollidersSize": 64
+    },
+    "EnqueueIncompleteSynchronousSpawns": false,
+    "InvokeRenderInBatchMode": true,
+    "NetworkIdIsObjectName": false,
+    "HideNetworkObjectInactivityGuard": false,
+    "Simulation": {
+        "InputDataWordCount": 0,
+        "ReplicationFeatures": 1,
+        "InputTransferMode": 0,
+        "PlayerCount": 10,
+        "TickRateSelection": {
+            "Client": 64,
+            "ServerIndex": 0,
+            "ClientSendIndex": 1,
+            "ServerSendIndex": 1
+        }
+    },
+    "Network": {
+        "ConnectionTimeout": 10.0,
+        "ConnectionShutdownTime": 1.0,
+        "ReliableDataTransferModes": 3
+    },
+    "HostMigration": {
+        "EnableAutoUpdate": false,
+        "UpdateDelay": 10
+    },
+    "EncryptionConfig": {
+        "EnableEncryption": false
+    },
+    "NetworkConditions": {
+        "Enabled": false,
+        "DelayShape": 1,
+        "DelayMin": 0.01,
+        "DelayMax": 0.1,
+        "DelayPeriod": 3.0,
+        "DelayThreshold": 0.5,
+        "AdditionalJitter": 0.01,
+        "LossChanceShape": 1,
+        "LossChanceMin": 0.0,
+        "LossChanceMax": 0.02,
+        "LossChanceThreshold": 0.9,
+        "LossChancePeriod": 3.0,
+        "AdditionalLoss": 0.005
+    },
+    "Heap": {
+        "PageShift": 15,
+        "PageCount": 1024,
+        "GlobalsSize": 0
+    },
+    "AssembliesToWeave": [
+        "Assembly-CSharp",
+        "Assembly-CSharp-firstpass",
+        "PhotonVoice.Fusion"
+    ],
+    "UseSerializableDictionary": true,
+    "NullChecksForNetworkedProperties": true,
+    "CheckRpcAttributeUsage": false,
+    "CheckNetworkedPropertiesBeingEmpty": false
+}

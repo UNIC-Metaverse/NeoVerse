@@ -1,0 +1,140 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7001149997596866903
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 129340018, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+      propertyPath: touchableComponents
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 829641460, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+      propertyPath: touchableComponents
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1806066165, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 838808352863223363, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+      propertyPath: randomRadius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 838808352863223363, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+      propertyPath: startCenterPosition
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403603213583363398, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+      propertyPath: targetLayerMask.m_Bits
+      value: 524799
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403603213830381276, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 184319
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403603214171361312, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403603214171361312, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403603214171361312, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403603214171361312, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403603214171361312, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403603214171361312, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403603214171361312, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403603214171361312, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403603214171361312, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403603214171361312, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403603214171361312, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403603214171361314, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+      propertyPath: runner
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403603214171361315, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+      propertyPath: m_Name
+      value: MeetingRoomHardwareRig
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403603214171361315, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403603214355999796, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+      propertyPath: targetLayerMask.m_Bits
+      value: 524799
+      objectReference: {fileID: 0}
+    - target: {fileID: 5462430739732722854, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5954232172772090361, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+      propertyPath: menu
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968760221436035614, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968760221436035614, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitApplication
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968760221436035614, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Fusion.Samples.IndustriesComponents.ApplicationManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6058258953938274024, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+      propertyPath: handDecoration
+      value: 
+      objectReference: {fileID: 3713422715490965665}
+    - target: {fileID: 6058258953938274024, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+      propertyPath: displayLocalReprWhenOnline
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6663059457526024682, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800575710504142833, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+      propertyPath: displayLocalReprWhenOnline
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+--- !u!4 &3713422715490965665 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5954232172772090358, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+  m_PrefabInstance: {fileID: 7001149997596866903}
+  m_PrefabAsset: {fileID: 0}

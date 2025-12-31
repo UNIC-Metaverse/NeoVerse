@@ -1,0 +1,132 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5727686021027856922
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 89578148051069120, guid: 913a95e99f5e3e04eb71f0cd6db83f1b, type: 3}
+      propertyPath: mat
+      value: 
+      objectReference: {fileID: 2100000, guid: c7108791ba71cd3409025c136b18e1ce, type: 2}
+    - target: {fileID: 89578148051069120, guid: 913a95e99f5e3e04eb71f0cd6db83f1b, type: 3}
+      propertyPath: randomRadius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 89578148051069120, guid: 913a95e99f5e3e04eb71f0cd6db83f1b, type: 3}
+      propertyPath: startCenterPosition
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 89578148051069120, guid: 913a95e99f5e3e04eb71f0cd6db83f1b, type: 3}
+      propertyPath: headsetAvailableAction.m_Action.m_Id
+      value: 7416bda6-41b7-408b-805f-c954f1dbba98
+      objectReference: {fileID: 0}
+    - target: {fileID: 89578148051069120, guid: 913a95e99f5e3e04eb71f0cd6db83f1b, type: 3}
+      propertyPath: headsetAvailableAction.m_Action.m_Name
+      value: Headset Available
+      objectReference: {fileID: 0}
+    - target: {fileID: 430156008794673074, guid: 913a95e99f5e3e04eb71f0cd6db83f1b, type: 3}
+      propertyPath: touchableComponents
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158517094544467358, guid: 913a95e99f5e3e04eb71f0cd6db83f1b, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1294645137804913013, guid: 913a95e99f5e3e04eb71f0cd6db83f1b, type: 3}
+      propertyPath: navMeshDistanceTolerance
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2627278854448654021, guid: 913a95e99f5e3e04eb71f0cd6db83f1b, type: 3}
+      propertyPath: menuManager
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7197107724919209253, guid: 913a95e99f5e3e04eb71f0cd6db83f1b, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 708607
+      objectReference: {fileID: 0}
+    - target: {fileID: 7197107725745000127, guid: 913a95e99f5e3e04eb71f0cd6db83f1b, type: 3}
+      propertyPath: targetLayerMask.m_Bits
+      value: 524799
+      objectReference: {fileID: 0}
+    - target: {fileID: 7197107726467757017, guid: 913a95e99f5e3e04eb71f0cd6db83f1b, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7197107726467757017, guid: 913a95e99f5e3e04eb71f0cd6db83f1b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.5000061
+      objectReference: {fileID: 0}
+    - target: {fileID: 7197107726467757017, guid: 913a95e99f5e3e04eb71f0cd6db83f1b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7197107726467757017, guid: 913a95e99f5e3e04eb71f0cd6db83f1b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7197107726467757017, guid: 913a95e99f5e3e04eb71f0cd6db83f1b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7197107726467757017, guid: 913a95e99f5e3e04eb71f0cd6db83f1b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7197107726467757017, guid: 913a95e99f5e3e04eb71f0cd6db83f1b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7197107726467757017, guid: 913a95e99f5e3e04eb71f0cd6db83f1b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7197107726467757017, guid: 913a95e99f5e3e04eb71f0cd6db83f1b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7197107726467757017, guid: 913a95e99f5e3e04eb71f0cd6db83f1b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7197107726467757017, guid: 913a95e99f5e3e04eb71f0cd6db83f1b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7197107726467757018, guid: 913a95e99f5e3e04eb71f0cd6db83f1b, type: 3}
+      propertyPath: m_Name
+      value: MeetingRoomDesktopRig
+      objectReference: {fileID: 0}
+    - target: {fileID: 7197107726467757018, guid: 913a95e99f5e3e04eb71f0cd6db83f1b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7197107726467757019, guid: 913a95e99f5e3e04eb71f0cd6db83f1b, type: 3}
+      propertyPath: runner
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7197107726585073613, guid: 913a95e99f5e3e04eb71f0cd6db83f1b, type: 3}
+      propertyPath: targetLayerMask.m_Bits
+      value: 524799
+      objectReference: {fileID: 0}
+    - target: {fileID: 7593939834513809347, guid: 913a95e99f5e3e04eb71f0cd6db83f1b, type: 3}
+      propertyPath: touchableComponents
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8165894964095648960, guid: 913a95e99f5e3e04eb71f0cd6db83f1b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8165894964095648960, guid: 913a95e99f5e3e04eb71f0cd6db83f1b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitApplication
+      objectReference: {fileID: 0}
+    - target: {fileID: 8165894964095648960, guid: 913a95e99f5e3e04eb71f0cd6db83f1b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Fusion.Samples.IndustriesComponents.ApplicationManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1839368876559726474, guid: 913a95e99f5e3e04eb71f0cd6db83f1b, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 913a95e99f5e3e04eb71f0cd6db83f1b, type: 3}

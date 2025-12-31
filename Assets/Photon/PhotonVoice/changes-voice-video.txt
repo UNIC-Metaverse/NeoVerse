@@ -1,0 +1,182 @@
+Photon Voice 2 Video Change Log
+
+v2.57 (December 13, 2024)
+
+v2.56 (August 19, 2024)
+Core:
+   FIXED: the incoming buffer processing bug affected low fps videos
+WebGL:
+   ADDED: H265 and AV1 codecs
+   FIXED: the AV1 decoder skips the 1st keyframe that breaks the decoder for an unknown reason
+   NOTE: a lost packet still can break the AV1 decoder at any time later (voice ring buffer may lose packets even if the transport is reliable)
+   NOTE: H264, VP8, VP9: encoder and decoder work
+Windows:
+   FIXED: uWindowCaptureRecorder split to singleton uWindowCaptureHost MonoBehavior and uWindowCaptureRecorder class that supports multiple instances (many streams per screenshare) and proper disposal when the local voice is destroyed
+iOS and Mac:
+   FIXED: compatibility with Chrome H264 codec
+TestVideo:
+   REMOVED: DesktopShare (uDesktopDuplicationRecorder) streaming option (use uWindowCaptureRecorder instead)
+   FIXED: local voices list cleanup when stopping the stream
+   ADDED: Region parameter in settings
+   ADDED: TestVideo Settings.AppVersion
+   CHANGED: TestVideo tries to join a random room first
+
+v2.55 (February 26, 2024)
+   ADDED: multiple streams per video camera source support for Windows, Mac (based on VideoRecorderUnity: Unity camera capture and native encoder) amd WebGL
+   BREAKING: added IPreviewManager.Has() that allows a ui builder to skip objects that do not have a preview but would otherwise take space in the layout
+Core:
+   FIXED: frameReadPos advance and lost frames detection resulted in false lost frames reports and null frames input to the decoder
+   FIXED: read to write delay was 1 frame larger than set; now if DelayFrames is 0 in unfragmented mode, just written frame can be read immediately
+   FIXED: config frames also put in the normal frame queue to avoid processing it as a lost frame
+   BREAKING: removed VoiceClient.FramesMiss (it's hard to count and not very useful) and FramesLateUsed
+Android:
+   CHANGED: AndroidVideoEncoder: Dispose() called for buffer objects in data callback to release resources earlier
+   FIXED: without objects disposal, the app crashed with 'JNI ERROR (app bug): global reference table overflow' error after a few minutes of running (probably a regression bug)
+TestVideo:
+   ADDED: enable/disable outgoing streams at runtime
+   ADDED: support for a 2nd, low-bitrate stream from the camera
+
+v2.54 (January 08, 2024)
+LoadBalancingTransport:
+   CHANGED: LoadBalancingTransport reserves 4 enet channels: 0 channel, audio, video and screen sharing
+
+v2.53 (September 06, 2023)
+WebGL:
+   ADDED: WebGL video streaming support: video capture, screen capture, rendering to texture, WebCodecs API based encoding and decoding: WebCodecsCameraRecorderUnityTexture, WebCodecsScreenRecorderUnityTexture and WebCodecsVideoPlayerUnityTexture based on WebCodecsCamera, WebCodecsScreenShare, WebCodecsVideoEncoder, WebCodecsVideoDecoderUnityTexture
+   NOTE: browsers supported by WebGL video: Chrome, Opera, Edge
+   ADDED: VideoSourceSizeMode struct with VideoSourceSizeMode.Mode enum controlling the resize of the video source before passing it to the encoder if supported by the source: Fixed (given sizes), Constrained (set to <= given sizes, aspect ratio is preserved) and Source; boolean VideoSourceSizeMode.Update controlling whether the sizes are updated if the source sizes change after initialization (ignored for Fixed)
+   NOTE: VideoSourceSizeMode is currently used only by WebCodecsCameraRecorderUnityTexture / WebCodecsScreenShare
+   ADDED: Platform WebGL video recorder, player and preview factories, 'UnityTexture' methods are 'native' for WebGL
+   ADDED: video input device enumeration: WebVideoInEnumerator
+Android:
+   CHANGED: Android native video: KEY_PREPEND_HEADER_TO_SYNC_FRAMES format flag set for h264 (and h265) codec: now every keyframe has vital codec info, unique config frame processing is no longer required
+   CHANGED: AndroidVideoEncoder decoupled from the camera wrapper (ADDED: AndroidCameraVideoEncoder extending AndroidVideoEncoder) and can be used standalone
+   ADDED: AndroidVideoEncoder.Surface property returning the surface to which the input component should write
+   BREAKING: AndroidVideoEncoderSurfaceView -> AndroidCameraVideoEncoderSurfaceView, AndroidVideoEncoderTexture -> AndroidCameraVideoEncoderTexture
+Core:
+   FIXED: LoadBalancingTransport: config frame delivery mode is Reliable, the same as for VoiceInfo event, otherwise config frame can be delivered earlier than VoiceInfo
+   FIXED: RemoteVoice: config frames are processed in a separate queue to guarantee that they are decoded: when put in the common queue, they could be dropped if their neighbors have been delivered faster and already processed
+TestVideo:
+   CHANGED: defaults VideoReliable = true, VideoFragment = true (recommended for large packets), VideoEcho = false
+   CHANGED: microphone and camera enumerators are created lazily, on 1st access in 'disconnected' ui
+   CHANGED: camera video recorder does not create a local voice until successful onReady callback
+   CHANGED: only video codecs are in the codec list
+
+v2.52 (May 23, 2023)
+   UPDATED: Photon3Unity3D.dll, Photon Realtime (LoadBalancing) and Chat APIs to v4.1.6.24
+   ADDED: LocalVoice.Fragment, LocalVoice.FEC, see PhotonVoiceApi/changes-voice-api.txt for details
+   NOTE: The combination of Fragment and FEC or Fragment and Reliable can improve the reliability and quality of high bitrate video streaming. Previously used reliable transmission of large frames could cause disconnects.
+   CHANGED: incoming stream events queue reworked, see PhotonVoiceApi/changes-voice-api.txt 
+   BREAKING: changes in Voice API, see PhotonVoiceApi/changes-voice-api.txt
+   CHANGED: stream events delivery mode in LoadBalancingTransport.SendFrame() changed to ReliableUnsequenced and UnreliableUnsequenced
+   CHANGED: LoadBalancingTransport no longer automatically assigns a Photon channel to events per media type, the user must specify the channel explicitly when a local voice is created
+Unity:
+   ADDED: VoiceConnection.ChannelAudio and ChannelVideo constants to coordinate voice channels assignment between Unity integration components
+   CHANGED: VideoRecorderUnity.ScreenRecorder and uWindowCaptureRecorder use ImageBufferNativeGCHandleBytes instead of ImageBufferNativeGCHandleSinglePlane, no more per frame byte[] allocations
+   CHANGED: Unity methods made protected virtual in video components
+Windows:
+   CHANGED: video: MFTVideoEncode sets MF_MT_MAX_KEYFRAME_SPACING encoder output attribute according to Photon_Video_CreateEncoder() 'keyFrameInt' parameter
+UWP Video Decoder:
+   FIXED: input FrameBuffers are no longer released in MediaStreamSample.Processed which seems to skip some of the samples passed to MediaStreamSource, leading to leaks: we copy the input byte array instead and rely on GC
+   FIXED: if sampleQueue is too large, it's cleared and filled with the current frame if it's a keyframe, otherwise the frame is ignored and the queue remains intact (previously it could grow above the limit)
+   CHANGED: sampleQueue max size is 5 to avoid playback delays
+   FIXED: incorrect call order of buffer Retain() prevented buffers from being reused
+iOS:
+   FIXED: Video: VTCompressionSession ignored bitrate and possibly other properties in recent iOS versions because null timestamp were passed to VTCompressionSessionEncodeFrame(), now the timestamp retrieved from the captured CMSampleBuffer instance is used
+Mac:
+   CHANGED: Video: current time is used as the timestamp in VTCompressionSessionEncodeFrame() call which looks more reasonable than the previously used frame counter divided by fps (a CMSampleBuffer instance is not available because a byte buffer from an external capture module is passed to the encoder)   
+TestVideo:
+   ADDED: Encrypt, Fragment and FEC settings and checkboxes in UI
+   CHANGED: if a VoiceConnection component is attached to the LBClient object, it's used instead of explicitly created transport allowing integration with other Unity components like PhotonVoiceLagSimulationGui and PhotonVoiceStatsGui
+
+v2.51 (February 06, 2023)
+
+v0.10 (February 02, 2023 - rev6697 / 41c70b7)
+    UPDATED: to Voice SDK 2.51
+    ADDED: OSX VPx library Apple Silicon (M1) support
+    ADDED: github.com/hecomi/uWindowCapture integration
+
+v0.9 (June 14, 2022 - rev6442 / 8a04e91)
+    ADDED: CameraFacing enum
+    ADDED: DeviceFeatures class containing fields defining device-specific features (CameraFacing is the only currently implemented)
+    ADDED: DeviceInfo.Features property
+Android:
+    ADDED: AndroidVideoInEnumerator returning device infos with CameraFacing feature set
+    BREAKING: AndroidVideoEncoderSurfaceView, AndroidVideoEncoderTexture, AndroidVideoRecorderSurfaceView, AndroidVideoRecorderUnityTexture constructors: 'cameraID' parameter added
+iOS:
+    ADDED: VideoInEnumerator returning device infos with CameraFacing feature set
+    BREAKING: VideoEncoderLayer, VideoEncoderUnityTexture, VideoRecorderLayer, VideoRecorderUnityTexture constructors: 'cameraID' parameter added
+HoloLens (HL2):
+    ADDED: single-pass stereo rendering support in video shaders
+
+v0.8 (February 11, 2022 - rev6351)
+    CHANGED: LoadBalancingTransport and LoadBalancingTransport2: multiple calls to SendOutgoingCommands() after OpRaiseEvent() to send possibly fragmented media frames asap
+UWP:
+    ADDED: UWP ARM64 support
+
+v0.7 (January 28, 2022 - rev6345)
+    ADDED: '_Flip' parameter for VideoTexture3D shaders: should be set according to IVideoRecorder or IVideoPlayer Flip property when material is applied
+    ADDED: convenience method VideoTexture.Shader3D.MakeMaterial()
+    BREAKING: ScreenRecorder.Encoder property setter replaced with SetEncoder() accepting IEncoderDirectImage
+    BREAKING: VideoRecorderUnity, ScreenRecorder, uDesktopDuplicationRecorder implement IVideoRecorderPusher that allows to automate LocalVoice assignment (it's no longer required in user code)
+    BREAKING: CreateLocalVoiceVideo accepts IVideoRecorder instead of IEncoder
+    ADDED: VoiceCLient: range of available voice ids (defaults to 1-15, can be specified in optional 'CreateOptions' constructor parameter)
+OSX:
+    FIXED: native audio capture did not allocate buffer output properly because the buffer size was not updated correctly (led to heavily distorted sound)
+UWP:
+    FIXED: video media capture stream sizes are set to the same as encoder's (encoder added black bars (letterboxing) if default media capture stream aspect ratio differed from encoder's)
+    FIXED: VideoDecoder retains input buffer and releases it after processing the sample (LoadBalancingTransport2 support)
+TestVoice:
+    FIXED: Dispose() is called on audio sources, unityScreenShareRecorder and desktopShareRecorder when disposing LBClient (non-disposed audio sources crashed Unity Editor on subsequent start due to running thread)
+    CHANGED: TestVideo creates ScreenRecorder component automatically if needed
+
+v0.6 (November 19, 2021 - rev6280)
+    CHANGED: video recorders' standard Error implementations return Encoder's error
+    ADDED: IVideoRecorder.Error property
+    CHANGED: VideoRecorderUnity sets Error property if camera fails to initialize instead of throwing an exception
+OSX:
+    CHANGED: bundle folder trees replaced with single files for all osx libs
+    ADDED: native libraries OSX Apple Silicon (M1) support
+    REMOVED: libvpx.bundle (VPx support) which is not compatible with the current Xcode
+    ADDED: AudioInChangeNotifier
+    FIXED: Unity exported XCode project compilation error: "unsealed contents present in the bundle root"
+Android:
+    CHANGED: GLES2 and GLES3 variants are different shaders now: SHADER_API_GLES3 does not work outside main() (FIXED: some devices worked with GL_OES_EGL_image_external in GLES3 but others did not)
+    CHANGED: AndroidVideoEncoderTexture and AndroidVideoDecoderTexture set Error if the current platform is not supported
+Unity:
+    ADDED: VideoTexture.Shader3D.Name and VideoTexture.ShaderScreen.Name convenience properties return correct VideoTexture shader name for the current platform
+    CHANGED: PreviewManagerScreenQuadTexture logs an error if the current platform is not supported
+
+v0.5 (August 18, 2021 - rev6179)
+    UPDATED: to PhotonVoice 2 v2.26.4
+    ADDED: video output to Unity texture: Platform.CreatePreviewManagerUnityTexture(), CreateVideoRecorderUnityTexture(), CreateVideoPlayerUnityTexture()
+    CHANGED: signatures of Platform.CreateDefaultPreviewManager(), CreateDefaultVideoRecorder(), CreateDefaultVideoPlayer()
+    ADDED: IPreviewManager, PreviewManager provides basic storage functionality
+    ADDED: video devices IDeviceEnumerator implementations: UWP.VideoInEnumerator, Unity.VideoInEnumerator (for Windows and MacOS), VideoInEnumeratorNotSupported and Platform.CreateVideoInEnumerator() method
+    CHANGED: Flip enum reworked to struct which is able to hold both vertical and horizontal flips and combine flips with * operator
+    ADDED: Unity uDesktopDuplicationRecorder component feeding uDesktopDuplication plugin output to Photon video LocalVoice
+    ADDED: ScreenRecorder capturing game screen in OnRenderImage (NOTE: chroma bug on resize)
+
+v0.4 (February 05, 2020 - rev5976)
+    FIXED: VideoRecorder: video stream fps is passed to WebCamTexture
+    FIXED: Video.dll 'runtime library' option set to /MT to avoid dependency on vcruntime dlls
+    CHANGED: Windows and MacOS: encoder rescales image provided by camera to target resolution specified in voice info (instead of updating voice info from camera resolution)
+    CHANGED: iOS: front camera used for capture, orientation of video passed to compressor adjusted to compensate mirroring
+    CHANGED: iOS: decoder returns error code instead of throwing an exception, this error code is ignored in c# wrapper because it may be not critical
+    CHANGED: MacOS: video encoder and decoder error codes are igonored in c# wrapper because they may be not critical
+    CHANGED: platform not supporting VPx (iOS and UWP) throw an exception when VPx recorder or player creation requested
+
+v0.3 (December 17, 2020 - rev5951)
+    FIXED: MacOS: crash if VideoRecorder updates video sizes after encoder has been created
+    FIXED: MacOS: multiple Video Decoder errors due to passing zero data (missing check)
+    ADDED: VPx codec support for Windows (s/w), MacOS (s/w) and Android (h/w)
+
+v0.2 (December 01, 2020 - rev5904)
+    ADDED: VoiceClient.SetRemoteVoiceDelayFrames() method allowing to synchronize streams by decoding with delay (10 frames delay for video works good on most platforms)
+    ADDED: PreviewManagerUnityObjectTexture, a sample of preview manager updating Unity object texture: supported when VideoPlayerUnity is used (Windows, MacOS)
+
+v0.1 (November 27, 2020 - rev5900)
+    ADDED: Video Streaming, H264 codec: Windows, UWP, MacOS, iOS, Android
+
+***
+

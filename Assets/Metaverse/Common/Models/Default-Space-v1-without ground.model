@@ -1,0 +1,22 @@
+# Made using Asset Forge (2.3.0)
+
+:materials
+
+[name:_defaultMat;color:RGBA(0.939, 0.953, 1.000, 1.000);scale:(1.0, 1.0);shader:Default;valueA:0.35;valueB:0.25;]
+[name:dark;color:RGBA(0.224, 0.235, 0.275, 1.000);scale:(1.0, 1.0);shader:Default;valueA:0.35;valueB:0;]
+[name:dirt;color:RGBA(0.886, 0.514, 0.341, 1.000);scale:(1.0, 1.0);shader:Default;valueA:0.5;valueB:0;]
+[name:grass;color:RGBA(0.207, 0.858, 0.639, 1.000);scale:(1.0, 1.0);shader:Default;valueA:0.5;valueB:0;]
+[name:wood;color:RGBA(0.710, 0.408, 0.271, 1.000);scale:(1.0, 1.0);shader:Default;valueA:0.5;valueB:0;]
+[name:stone;color:RGBA(0.678, 0.798, 0.821, 1.000);scale:(1.0, 1.0);shader:Default;valueA:0.5;valueB:0;]
+[name:leafsGreen;color:RGBA(0.000, 0.372, 0.303, 1.000);scale:(1.0, 1.0);shader:Default;valueA:0.5;valueB:0;]
+[name:metalPurple;color:RGBA(0.498, 0.404, 0.933, 1.000);scale:(1.0, 1.0);shader:Default;valueA:0.35;valueB:0;]
+[name:woodBarkDark;color:RGBA(0.800, 0.463, 0.369, 1.000);scale:(1.0, 1.0);shader:Default;valueA:0.5;valueB:0;]
+[name:custom43;color:RGBA(0.517, 0.517, 0.517, 1.000);scale:(1.0, 1.0);shader:Default;valueA:0.5;valueB:0;]
+[name:glass;color:RGBA(1.000, 1.000, 1.000, 1.000);scale:(1.0, 1.0);shader:Unlit;]
+[name:steel;color:RGBA(0.311, 0.309, 0.340, 1.000);scale:(1.0, 1.0);shader:Default;valueA:0.35;valueB:0.25;]
+[name:custom15;color:RGBA(1.000, 0.976, 0.505, 1.000);scale:(1.0, 1.0);shader:Default;valueA:0.5;valueB:0.15;]
+[name:custom13;color:RGBA(0.545, 0.545, 0.545, 1.000);scale:(1.0, 1.0);shader:Default;valueA:0.5;valueB:0.15;]
+
+:models
+
+[name:;collection:kenney_hexagonkit_1;type:stone_mountain;position:(0.0000, -0.1000, 0.0000);rotation:(0.0000, 180.0000, 180.0000);scale:(60.0000, 10.0000, 60.0000);group:Group_25;locked:False;hidden:False;materials:dirt+custom43+custom43;]
