@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Metaverse/Spaces/MeetingRoom/AvatarSelection/Scenes/AvatarSelection.unity
-    guid: b89ebdf1b470bdd45aad24418c48162c
+    path: Assets/Scenes/AvatarSelection.unity
+    guid: e6d17b390d5a2f048b523d3f3ed1baa5
   - enabled: 1
     path: Assets/Metaverse/Spaces/University/UNIC.unity
     guid: 848f9f1df05bf5148bc1d3adbefe8867
