@@ -1,0 +1,414 @@
+fileFormatVersion: 2
+guid: 00dc416d332d05549834e1dc17036072
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Amphitheatre Paint
+    second: {fileID: 2100000, guid: 3ae77e367db33f447bc96c3c75050fa9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Banner
+    second: {fileID: 2100000, guid: fdb0ec4eeb171da4c81955cdd6cd1b7a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Boring buildings
+    second: {fileID: 2100000, guid: 3d4a1578381b6c344b03fd617ba80b41, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dirt
+    second: {fileID: 2100000, guid: 3d49eb29824a1f241a028ab7d181c4a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: 0c5c66b8f4d75ab4996322b967837829, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grass
+    second: {fileID: 2100000, guid: 47a77489a12336a4d89c11bdf8a7cb0e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gray Paint
+    second: {fileID: 2100000, guid: 93dd036a4728c494dae2b63d15dc8af7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gray Paint.001
+    second: {fileID: 2100000, guid: 71e6ae6e8ecae7e4e9a8b79cd290a8b9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lamps
+    second: {fileID: 2100000, guid: eb2f635dde2758d46ad88c7f93f02cc2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: 778879d262a624f4eac0e9a41938080a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TCom_Leaves_EuropeanBeech01_512_albedo.001
+    second: {fileID: 2100000, guid: 55dd28df7d6a4114dbe2a150526820c2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: The Block Sign
+    second: {fileID: 2100000, guid: 89f879eedf4560f41b83d9f2f5136f30, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: UNIC Main Sign
+    second: {fileID: 2100000, guid: 8f6866f4ce35bc547b844c9597ddedf7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: UNIC Millenium Sign
+    second: {fileID: 2100000, guid: d46dcb428f8f5e04985bb76448171ec6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Unic Black
+    second: {fileID: 2100000, guid: 8f644ed325e827b45984f058285f2f4e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Unic Gray
+    second: {fileID: 2100000, guid: f65a4f4ecf78cec4aa4fcdedb05c4273, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Unic Light Gray
+    second: {fileID: 2100000, guid: b57471fd4ea8ff74f867826b8ff79219, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Unic Red
+    second: {fileID: 2100000, guid: 14d74314322981249897af591533eb0d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Unic White
+    second: {fileID: 2100000, guid: f438cfb1c8db7aa4181bbaf03b3dff63, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White Paint
+    second: {fileID: 2100000, guid: 0dcf5014aa59dd744af092b48663c62e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White Paint Column
+    second: {fileID: 2100000, guid: 06d909a3d43990d4e81e8c093df706ba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White Paint Millennium
+    second: {fileID: 2100000, guid: 96837d94c5145a84fb719f01482023db, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White Paint Side Buildings
+    second: {fileID: 2100000, guid: 3082bd5b174b37c45819003236f4395d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: branch-1-01.001
+    second: {fileID: 2100000, guid: 00d520c1ead335b4c87228439cc701b1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: branch-1-02.001
+    second: {fileID: 2100000, guid: d29b36afdb9aa6e43a9c6eb19dbca8d7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: branch-2-01
+    second: {fileID: 2100000, guid: 2f169ef5ff53c0147add4f3627ac3287, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: branch-2-02
+    second: {fileID: 2100000, guid: 0b2115c743e627745911bbae7e16bb49, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: concrete
+    second: {fileID: 2100000, guid: 671c98e59b9918744a216446328bac16, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ground
+    second: {fileID: 2100000, guid: eb0ed4467ea2b884f8a6fbc25cb03c5b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: trunk-01.001
+    second: {fileID: 2100000, guid: b822f37a1e073de40a80f5cf139f7e83, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Central Sign background
+    second: {fileID: 2800000, guid: a9263b97cd471b442b148fc1defe921b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Concrete034_2K-JPG_Color
+    second: {fileID: 2800000, guid: c28b300c92a61fa4c97ed5ecfc306abc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Concrete034_2K-JPG_NormalGL
+    second: {fileID: 2800000, guid: a5a2363e59baf6e46a638b960db9658c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Concrete034_2K-JPG_Roughness
+    second: {fileID: 2800000, guid: 1186e416aeedcc048a5e11827cb72000, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Document
+    second: {fileID: 2800000, guid: 6e68b1cdb3545604f97af2faf17158eb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Grass005_2K-JPG_Color
+    second: {fileID: 2800000, guid: 97ca91be674958849961f8cde114a2eb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Grass005_2K-JPG_NormalGL
+    second: {fileID: 2800000, guid: b2ce99d47328b6c4cb192244ffad3c88, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Grass005_2K-JPG_Roughness
+    second: {fileID: 2800000, guid: a3c2dc8c28f73814aa8319d95cfde4c5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ground048_2K-JPG_Color
+    second: {fileID: 2800000, guid: 49c11f69dcb6c8848967785c8cf33f18, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ground048_2K-JPG_NormalGL
+    second: {fileID: 2800000, guid: 4fbe0c928dfd0df43b4d12eb27cac6f2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ground048_2K-JPG_Roughness
+    second: {fileID: 2800000, guid: c9697fe13c54b7f4bb5b52e15c7e35d7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Metal061B_2K-JPG_Color
+    second: {fileID: 2800000, guid: 7114a1c7b0db8e74190521f1d92f5e90, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Metal061B_2K-JPG_Metalness
+    second: {fileID: 2800000, guid: c1c7beb9d049b8949864923635da02b1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Metal061B_2K-JPG_NormalGL
+    second: {fileID: 2800000, guid: d1a3efff7c938a6419ded317ce730ed2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Metal061B_2K-JPG_Roughness
+    second: {fileID: 2800000, guid: 62c723625437d5c4bbc6eb9263d17888, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PavingStones038_2K-JPG_Color
+    second: {fileID: 2800000, guid: cc81c3d7f2ab2204295413c0a39c6865, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PavingStones038_2K-JPG_NormalGL
+    second: {fileID: 2800000, guid: 6b22513f4c141d847855030ea9fe3669, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PavingStones038_2K-JPG_Roughness
+    second: {fileID: 2800000, guid: da0252b5369d2794e8fab858455d060c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: TCom_Leaves_EuropeanBeech01_512_albedo
+    second: {fileID: 2800000, guid: 06ef0a4660fc07b4c9bd1cca697b268c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: TCom_Leaves_EuropeanBeech01_512_alpha
+    second: {fileID: 2800000, guid: 0e7926fd78856df4ba07ef0886737478, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: TCom_Leaves_EuropeanBeech01_512_normal
+    second: {fileID: 2800000, guid: eef9c8a8c32011c4799934076d7c885a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: TCom_Leaves_EuropeanBeech01_512_roughness
+    second: {fileID: 2800000, guid: 277a9e97705caa54295551838e7407a6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wallpaper001A_2K-JPG_Color
+    second: {fileID: 2800000, guid: c5d9eb7d3c8ae6d4baa168be39d95f0f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wallpaper001A_2K-JPG_NormalGL
+    second: {fileID: 2800000, guid: b73d774e38b04ad4587aa820c583974b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wallpaper001A_2K-JPG_Roughness
+    second: {fileID: 2800000, guid: 9c11e3c1ded7ebd4caae82fef47ae20c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: bark
+    second: {fileID: 2800000, guid: bf3f05464a599fe45beba8d335c392e2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: branch-01
+    second: {fileID: 2800000, guid: e01afbcaf40a1924d8b773b2e09175b2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: branch-02
+    second: {fileID: 2800000, guid: 69a8359b0d3e88e498a5bba6503cf293, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: branch-1-01
+    second: {fileID: 2800000, guid: 1c5709cb02249ec45b783c4968e109e4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: branch-1-02
+    second: {fileID: 2800000, guid: 17e07100d340dba479fdd225eb0eadaa, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: theblocklogo
+    second: {fileID: 2800000, guid: 205a59aa3c36d4349999e53f8db0af1e, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

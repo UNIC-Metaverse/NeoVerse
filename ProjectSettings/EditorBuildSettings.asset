@@ -9,11 +9,11 @@ EditorBuildSettings:
     path: Assets/Metaverse/Spaces/MeetingRoom/AvatarSelection/Scenes/AvatarSelection.unity
     guid: b89ebdf1b470bdd45aad24418c48162c
   - enabled: 1
-    path: Assets/Metaverse/Spaces/MeetingRoom/Spaces/MeetingRoom/Scenes/MeetingRoom.unity
-    guid: baa9dd1f23347ad4eba54b01c09aaa1f
-  - enabled: 1
     path: Assets/Metaverse/Spaces/University/UNIC.unity
     guid: 848f9f1df05bf5148bc1d3adbefe8867
+  - enabled: 1
+    path: Assets/Metaverse/Spaces/MeetingRoom/Spaces/MeetingRoom/Scenes/MeetingRoom.unity
+    guid: baa9dd1f23347ad4eba54b01c09aaa1f
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: f7c99e3480555744e9a379ea516af73e, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 556f3dfeff662654c848f4e4f84449fc, type: 2}
