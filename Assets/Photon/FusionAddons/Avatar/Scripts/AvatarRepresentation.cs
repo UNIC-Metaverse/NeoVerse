@@ -194,6 +194,7 @@ namespace Fusion.Addons.Avatar
 		// OnUserAvatarChange replaces the current username by the new name specified in the XRNetworkedRig/UserInfo 
 		void OnUserNameChange()
         {
+			Debug.Log("MYYY USERNAME CHANGED " + userInfo.UserName.ToString());
 			ChangeAvatarName(userInfo.UserName.ToString());
 		}
         #endregion

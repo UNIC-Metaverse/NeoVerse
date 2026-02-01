@@ -36,7 +36,7 @@ namespace Photon.Chat.DemoChat
         private string selectedChannelName; // mainly used for GUI/input
 
         public ChatClient chatClient;
-        
+
         public GameObject ConnectingLabel;
 
         public RectTransform ChatPanel; // set in inspector (to enable/disable panel)
@@ -130,11 +130,11 @@ namespace Photon.Chat.DemoChat
 
             this.chatClient = new ChatClient(this);
 
-            #if UNITY_WEBGL
+#if UNITY_WEBGL
             this.chatClient.UseBackgroundWorkerForSending = false;
-            #else
+#else
             this.chatClient.UseBackgroundWorkerForSending = true;
-            #endif
+#endif
 
             this.chatClient.Connect(ChatSettings.Instance.AppId, "1.0", new AuthenticationValues(UserName));
 

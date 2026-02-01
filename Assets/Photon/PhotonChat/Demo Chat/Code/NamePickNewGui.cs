@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Fusion.Addons.Avatar;
+using UnityEngine;
 using UnityEngine.UI;
 
 
@@ -16,8 +17,10 @@ namespace Photon.Chat.DemoChat
         public void Start()
         {
             this.chatNewComponent = FindObjectOfType<ChatNewGui>();
+            this.idInput.interactable = false;
 
-            string prefsName = PlayerPrefs.GetString(NamePickNewGui.UserNamePlayerPref);
+            string prefsName = PlayerPrefs.GetString(UserInfo.SETTINGS_USERNAME);
+            Debug.Log("NamePickNewGui: Start() found PlayerPref name: " + prefsName);
             if (!string.IsNullOrEmpty(prefsName))
             {
                 this.idInput.text = prefsName;
