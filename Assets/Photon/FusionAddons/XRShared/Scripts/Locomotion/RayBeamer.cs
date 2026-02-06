@@ -99,7 +99,7 @@ namespace Fusion.XR.Shared.Locomotion
         public virtual void Start()
         {
 #if ENABLE_INPUT_SYSTEM
-            rayAction.EnableWithDefaultXRBindings(hand.side, new List<string> { "thumbstickClicked", "primaryButton", "secondaryButton" });
+            rayAction.EnableWithDefaultXRBindings(hand.side, new List<string> { "thumbstickClicked" });
 #else
             Debug.LogError("Missing com.unity.inputsystem package");
 #endif

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Voice;
 using UnityEngine;
 using Fusion;
 

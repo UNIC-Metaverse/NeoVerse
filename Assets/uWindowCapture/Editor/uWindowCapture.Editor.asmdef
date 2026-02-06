@@ -1,5 +1,6 @@
 {
     "name": "uWindowCapture.Editor",
+    "rootNamespace": "",
     "references": [
         "GUID:56dd35f9b6f21364494ed8365264cbf6"
     ],

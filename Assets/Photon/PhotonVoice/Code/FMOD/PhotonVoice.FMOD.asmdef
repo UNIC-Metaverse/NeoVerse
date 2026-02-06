@@ -1,5 +1,6 @@
 {
     "name": "PhotonVoice.FMOD",
+    "rootNamespace": "",
     "references": [
         "PhotonVoice",
         "PhotonVoice.API",
