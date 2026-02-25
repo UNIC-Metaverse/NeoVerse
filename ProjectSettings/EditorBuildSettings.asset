@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Metaverse/Spaces/University/UNIC.unity
     guid: 848f9f1df05bf5148bc1d3adbefe8867
+  - enabled: 0
+    path: Assets/Metaverse/Spaces/Unisa/Unisa.unity
+    guid: 711609c25ba5c674f9df140cee9d9a2f
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 209a3f30c0640a14fb6ac06bdfa5e0aa, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 7a7970b4603a5a94e829affc5f0c9008, type: 2}
