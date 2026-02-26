@@ -4395,7 +4395,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7197107726467757018, guid: 913a95e99f5e3e04eb71f0cd6db83f1b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7197107726467757019, guid: 913a95e99f5e3e04eb71f0cd6db83f1b, type: 3}
       propertyPath: runner
@@ -7650,6 +7650,10 @@ PrefabInstance:
     - target: {fileID: 2639540652976512734, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
       propertyPath: characterName
       value: Melissa
+      objectReference: {fileID: 0}
+    - target: {fileID: 2639540652976512734, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
+      propertyPath: initializeSessionID
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3458780173217957940, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
       propertyPath: m_LocalScale.x
@@ -11386,11 +11390,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4176810565044632642, guid: 9087caef7ef61a841b65065e39fd96bd, type: 3}
       propertyPath: selectionMode
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4176810565044632642, guid: 9087caef7ef61a841b65065e39fd96bd, type: 3}
       propertyPath: forcedKindName
-      value: Desktop
+      value: VR
       objectReference: {fileID: 0}
     - target: {fileID: 4176810565044632642, guid: 9087caef7ef61a841b65065e39fd96bd, type: 3}
       propertyPath: connexionHandler
@@ -14902,7 +14906,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4403603214171361315, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4403603214171361343, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
       propertyPath: turnSpeed
@@ -14971,7 +14975,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1044667773769218168, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 1044667773856368274, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
 --- !u!114 &1847280842 stripped
 MonoBehaviour:

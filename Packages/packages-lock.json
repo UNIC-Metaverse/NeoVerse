@@ -19,25 +19,6 @@
       "dependencies": {},
       "hash": "f8c8347af3a144069dffd6120f1c4142f8120891"
     },
-    "com.readyplayerme.core": {
-      "version": "https://github.com/readyplayerme/rpm-unity-sdk-core.git#v3.3.0",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {
-        "com.unity.nuget.newtonsoft-json": "3.0.2"
-      },
-      "hash": "ae826a85a11f40e6997390deb8db310543e5851b"
-    },
-    "com.readyplayerme.webview": {
-      "version": "https://github.com/readyplayerme/rpm-unity-sdk-webview.git#v2.0.0",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {
-        "com.unity.ugui": "1.0.0",
-        "com.unity.nuget.newtonsoft-json": "3.0.2"
-      },
-      "hash": "253c84e09ae4c9622eca5b945ac84a8d8bb914ad"
-    },
     "com.soupday.cc3_unity_tools": {
       "version": "https://github.com/soupday/cc_unity_tools_URP.git",
       "depth": 0,
