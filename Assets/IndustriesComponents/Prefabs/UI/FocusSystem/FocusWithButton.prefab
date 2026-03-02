@@ -32,7 +32,6 @@ RectTransform:
   - {fileID: 1719911675}
   - {fileID: 9013313313182198577}
   m_Father: {fileID: 1948932681}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -78,7 +77,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 400669497}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -156,7 +154,6 @@ RectTransform:
   m_Children:
   - {fileID: 400669497}
   m_Father: {fileID: 1942720494156024974}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -180,7 +177,9 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_TargetDisplay: 0
@@ -256,7 +255,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9013313313182198577}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -271,9 +269,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7483437934323922553}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 100, y: 100, z: 20}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &7871163159365587571
@@ -288,21 +294,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fbe01c6abc2914283ccb45db7b2ba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  touchMaterial: {fileID: 2100000, guid: 09f7a31bf2c5caa4183200c48a033157, type: 2}
-  restoreMaterialAtUntouch: 0
-  isToggleButton: 0
-  audioSource: {fileID: 0}
+  buttonStatus: 0
   timeBetweenTouchTrigger: 0.3
   timeBetweenUnTouchTrigger: 0.3
-  buttonStatus: 0
-  Type: OnTouchButton
+  isToggleButton: 0
+  touchMaterial: {fileID: 2100000, guid: 09f7a31bf2c5caa4183200c48a033157, type: 2}
+  restoreMaterialAtUntouch: 0
+  feedback: {fileID: 0}
+  audioFeedbackType: OnTouchButton
   playSoundWhenTouched: 0
+  playHapticWhenTouched: 1
   onTouch:
     m_PersistentCalls:
       m_Calls: []
   onUnTouch:
     m_PersistentCalls:
       m_Calls: []
+  analyseTouchersContactsImmediatly: 1
 --- !u!114 &740237573234787972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -353,7 +361,6 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 9013313313182198577}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -380,7 +387,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -447,7 +454,6 @@ RectTransform:
   - {fileID: 4609391882775070581}
   - {fileID: 4429088071951493624}
   m_Father: {fileID: 400669497}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -568,6 +574,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6963430188475757412, guid: fd06b8827904a38489062af57a794bb8, type: 3}
@@ -643,6 +650,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6963430188475757415, guid: fd06b8827904a38489062af57a794bb8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1948932681}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6963430188475757413, guid: fd06b8827904a38489062af57a794bb8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1570478499371934015}
   m_SourcePrefab: {fileID: 100100000, guid: fd06b8827904a38489062af57a794bb8, type: 3}
 --- !u!1 &1942720494156024972 stripped
 GameObject:
