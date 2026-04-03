@@ -315,6 +315,7 @@ namespace Fusion.Samples.IndustriesComponents
             avatarRepresentation.ChangeAvatar(simpleAvatarConfig.URL);
         }
 
+        [ContextMenu("Connect VR")]
         // ConnectForceVR is called when the user select the "Join in VR" button
         public void ConnectForceVR()
         {
@@ -324,6 +325,7 @@ namespace Fusion.Samples.IndustriesComponents
             Connect();
         }
 
+        [ContextMenu("Connect Desktop")]
         // ConnectForceDesktop is called when the user select the "Join in Desktop mode" button
         public void ConnectForceDesktop()
         {
