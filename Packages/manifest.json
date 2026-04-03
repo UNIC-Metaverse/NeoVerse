@@ -2,8 +2,6 @@
   "dependencies": {
     "com.atteneder.gltfast": "https://github.com/atteneder/glTFast.git#v5.0.0",
     "com.hwaet.projectcloner": "https://github.com/hwaet/UnityProjectCloner.git",
-    "com.readyplayerme.core": "https://github.com/readyplayerme/rpm-unity-sdk-core.git#v3.3.0",
-    "com.readyplayerme.webview": "https://github.com/readyplayerme/rpm-unity-sdk-webview.git#v2.0.0",
     "com.soupday.cc3_unity_tools": "https://github.com/soupday/cc_unity_tools_URP.git",
     "com.unity.ai.navigation": "1.1.6",
     "com.unity.collab-proxy": "2.7.1",

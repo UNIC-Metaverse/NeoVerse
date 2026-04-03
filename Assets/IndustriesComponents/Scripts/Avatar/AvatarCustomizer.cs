@@ -1,5 +1,4 @@
 using Fusion.Addons.Avatar;
-using Fusion.Addons.Avatar.ReadyPlayerMe;
 using Fusion.Addons.Avatar.SimpleAvatar;
 using Fusion.XR.Shared.Locomotion;
 using Fusion.XR.Shared.Rig;
@@ -43,12 +42,8 @@ namespace Fusion.Samples.IndustriesComponents
         public GameObject vrModeConnectButton;
 
         public TabButtonUI tabButtonSimpleAvatar;
-        public TabButtonUI tabButtonRPMAvatar;
-
 
         public string latestSimpleAvatarURL;
-        public string latestRPMAvatarURL;
-        string defaultRPMAvatarURL = "rpmcached://men2";
 
         [Header("VR settings")]
         public bool defaultVRMode = false;
@@ -87,9 +82,6 @@ namespace Fusion.Samples.IndustriesComponents
 
             if (tabButtonSimpleAvatar)
                 tabButtonSimpleAvatar.onTabSelected.AddListener(SimpleAvatarTabSelected);
-
-            if (tabButtonRPMAvatar)
-                tabButtonRPMAvatar.onTabSelected.AddListener(RPMAvatarTabSelected);
         }
 
         void ActivateVRMode()
@@ -112,20 +104,6 @@ namespace Fusion.Samples.IndustriesComponents
             RigInfo rigInfo = RigInfo.FindRigInfo(allowSceneSearch: true);
             if (!rigInfo) return;
             rigInfo.localHardwareRigKind = RigInfo.RigKind.Desktop;
-        }
-
-
-        private void RPMAvatarTabSelected()
-        {
-            if (string.IsNullOrEmpty(latestRPMAvatarURL) == false)
-            {
-                avatarRepresentation.ChangeAvatar(latestRPMAvatarURL);
-            }
-            else
-            {
-                avatarRepresentation.ChangeAvatar(defaultRPMAvatarURL);
-            }
-
         }
 
         private void SimpleAvatarTabSelected()
@@ -285,7 +263,6 @@ namespace Fusion.Samples.IndustriesComponents
                 else
                 {
                     avatarRepresentation.ChangeAvatar(avatarURL);
-                    tabButtonRPMAvatar.OnClick();
                 }
             }
             else
@@ -336,12 +313,6 @@ namespace Fusion.Samples.IndustriesComponents
             if (val >= referenceAvatar.skinMaterials.Count) return;
             simpleAvatarConfig.skinMat = val;
             avatarRepresentation.ChangeAvatar(simpleAvatarConfig.URL);
-        }
-
-
-        public void SelectAvatarModel(RPMAvatarLoader _avatarLoader)
-        {
-            avatarRepresentation.ChangeAvatar(_avatarLoader.avatarInfo.avatarURL);
         }
 
         // ConnectForceVR is called when the user select the "Join in VR" button

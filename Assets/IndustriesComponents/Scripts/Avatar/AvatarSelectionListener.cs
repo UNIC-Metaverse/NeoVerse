@@ -1,5 +1,4 @@
 using Fusion.Addons.Avatar;
-using Fusion.Addons.Avatar.ReadyPlayerMe;
 using Fusion.Addons.Avatar.SimpleAvatar;
 using Fusion.Samples.IndustriesComponents;
 using System.Collections;
@@ -25,11 +24,6 @@ public class AvatarSelectionListener : MonoBehaviour, IAvatarRepresentationListe
         if(avatar is SimpleAvatar)
         {
             avatarCustomizer.latestSimpleAvatarURL = avatar.AvatarURL;
-        }
-        else if (avatar is RPMAvatarLoader)
-        {
-            avatarCustomizer.latestRPMAvatarURL = avatar.AvatarURL;
-
         }
     }
 
