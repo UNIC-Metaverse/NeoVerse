@@ -425,6 +425,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 29498571}
   m_Mesh: {fileID: -6790755474097059716, guid: 85e36292ecbfba6438b9fd1734ab8f3b, type: 3}
+--- !u!20 &35409667 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 4403603213830381276, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+  m_PrefabInstance: {fileID: 1698130693}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &52089384
 GameObject:
   m_ObjectHideFlags: 0
@@ -6535,6 +6540,14 @@ PrefabInstance:
       propertyPath: initializeSessionID
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3368775047395708700, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3368775047395708700, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3458780173217957940, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.997585
@@ -6549,7 +6562,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3458780173217957940, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.152
+      value: 8.308
       objectReference: {fileID: 0}
     - target: {fileID: 3458780173217957940, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6557,7 +6570,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3458780173217957940, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.988
+      value: -1.759
       objectReference: {fileID: 0}
     - target: {fileID: 3458780173217957940, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6590,6 +6603,14 @@ PrefabInstance:
     - target: {fileID: 4272753387560391310, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
       propertyPath: m_Name
       value: Convai NPC Melissa
+      objectReference: {fileID: 0}
+    - target: {fileID: 8500418351258097550, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8500418351258097550, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8661220628329745143, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
       propertyPath: MinDistance
@@ -9676,8 +9697,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1.7925265}
+  m_Center: {x: 0, y: 0, z: 0.39626196}
 --- !u!23 &967955714
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11429,7 +11450,7 @@ Transform:
   m_GameObject: {fileID: 1230264475}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 205.4714, y: 4.6849375, z: 260.41495}
+  m_LocalPosition: {x: 205.4714, y: 4.53, z: 260.41495}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13031,7 +13052,7 @@ Transform:
   m_GameObject: {fileID: 1249617917}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -205.4714, y: -4.6849375, z: -260.41495}
+  m_LocalPosition: {x: -205.4714, y: -4.71, z: -260.41495}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17030,7 +17051,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4403603214171361312, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.637
+      value: 0.21
       objectReference: {fileID: 0}
     - target: {fileID: 4403603214171361312, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
       propertyPath: m_LocalPosition.z
@@ -17210,8 +17231,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.7710992, y: 1, z: 0.9999999}
+  m_Center: {x: 0.38554934, y: 0, z: 0}
 --- !u!23 &1698915934
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18414,7 +18435,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1574400182731430801, guid: 9087caef7ef61a841b65065e39fd96bd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.576
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 1574400182731430801, guid: 9087caef7ef61a841b65065e39fd96bd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18470,7 +18491,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4176810565044632642, guid: 9087caef7ef61a841b65065e39fd96bd, type: 3}
       propertyPath: selectionMode
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4176810565044632642, guid: 9087caef7ef61a841b65065e39fd96bd, type: 3}
       propertyPath: forcedKindName
@@ -23596,9 +23617,9 @@ Canvas:
   m_GameObject: {fileID: 1586462143937287227}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
+  m_RenderMode: 1
+  m_Camera: {fileID: 35409667}
+  m_PlaneDistance: 0.17
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -27545,7 +27566,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!23 &5293556480953267975
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28345,18 +28366,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1586462143937287227}
-  m_LocalRotation: {x: 0.08715578, y: 0, z: 0, w: 0.9961947}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2543859362743064844}
   m_LocalEulerAnglesHint: {x: 10, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 1.35}
-  m_SizeDelta: {x: 980, y: 735}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!23 &6147732777064531166
 MeshRenderer:
   m_ObjectHideFlags: 0
