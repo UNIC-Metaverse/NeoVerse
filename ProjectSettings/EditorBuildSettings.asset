@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Project/Spaces/UNIC/Scenes/UnicReceptionArea.unity
     guid: 39088139e5a0e714588dd87cb659a922
+  - enabled: 1
+    path: Assets/_Project/Spaces/MeetingRoom/Scenes/MeetingRoom.unity
+    guid: baa9dd1f23347ad4eba54b01c09aaa1f
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 209a3f30c0640a14fb6ac06bdfa5e0aa, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 7a7970b4603a5a94e829affc5f0c9008, type: 2}
