@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.4716981, g: 0.46711186, b: 0.40717337, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 11ba420337a8986418ea6599d71a4b3a, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -6309,6 +6309,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 880736289}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &748147558
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 611602841913923752, guid: cc9605b0d2902a849aeab83a50df8bdd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 611602841913923752, guid: cc9605b0d2902a849aeab83a50df8bdd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.17999983
+      objectReference: {fileID: 0}
+    - target: {fileID: 611602841913923752, guid: cc9605b0d2902a849aeab83a50df8bdd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.635
+      objectReference: {fileID: 0}
+    - target: {fileID: 611602841913923752, guid: cc9605b0d2902a849aeab83a50df8bdd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6620389
+      objectReference: {fileID: 0}
+    - target: {fileID: 611602841913923752, guid: cc9605b0d2902a849aeab83a50df8bdd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 611602841913923752, guid: cc9605b0d2902a849aeab83a50df8bdd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.74946946
+      objectReference: {fileID: 0}
+    - target: {fileID: 611602841913923752, guid: cc9605b0d2902a849aeab83a50df8bdd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 611602841913923752, guid: cc9605b0d2902a849aeab83a50df8bdd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 611602841913923752, guid: cc9605b0d2902a849aeab83a50df8bdd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 97.089
+      objectReference: {fileID: 0}
+    - target: {fileID: 611602841913923752, guid: cc9605b0d2902a849aeab83a50df8bdd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3973251519004208318, guid: cc9605b0d2902a849aeab83a50df8bdd, type: 3}
+      propertyPath: m_Name
+      value: Convai NPC Mike Carter
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc9605b0d2902a849aeab83a50df8bdd, type: 3}
+--- !u!114 &748147559 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6242094742071033383, guid: cc9605b0d2902a849aeab83a50df8bdd, type: 3}
+  m_PrefabInstance: {fileID: 748147558}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b38e4bc919e1f040ba78aea7472893e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &753548866
 GameObject:
   m_ObjectHideFlags: 0
@@ -26363,6 +26431,9 @@ MonoBehaviour:
   - characterGameObject: {fileID: 1625795246}
     characterName: Melissa
     characterTextColor: {r: 1, g: 0, b: 0, a: 1}
+  - characterGameObject: {fileID: 748147559}
+    characterName: Mike Carter
+    characterTextColor: {r: 1, g: 0, b: 0, a: 1}
   playerTextColor: {r: 0.19215687, g: 0.8901961, b: 0.50980395, a: 1}
 --- !u!1 &4169212210579820618
 GameObject:
@@ -31126,3 +31197,4 @@ SceneRoots:
   - {fileID: 1234219836}
   - {fileID: 1772373898}
   - {fileID: 1723262682}
+  - {fileID: 748147558}
