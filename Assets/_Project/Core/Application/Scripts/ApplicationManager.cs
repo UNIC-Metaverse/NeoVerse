@@ -111,8 +111,11 @@ namespace Fusion.Samples.IndustriesComponents
 
         private void OnDestroy()
         {
-            sessionEventsManager.onDisconnectedFromServer.RemoveListener(DisconnectedFromServer);
-            sessionEventsManager.onShutdown.RemoveListener(Shutdown);
+            if (sessionEventsManager)
+            {
+                sessionEventsManager.onDisconnectedFromServer.RemoveListener(DisconnectedFromServer);
+                sessionEventsManager.onShutdown.RemoveListener(Shutdown);
+            }
         }
 
         // ShutdownWithError is called when the application is launched without an active network connection (network interface disabled or no link for example) or if an network interface failure occurs at run

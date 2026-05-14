@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.anklebreaker.unity-mcp": "https://github.com/AnkleBreaker-Studio/unity-mcp-plugin.git",
     "com.atteneder.gltfast": "https://github.com/atteneder/glTFast.git#v5.0.0",
     "com.hwaet.projectcloner": "https://github.com/hwaet/UnityProjectCloner.git",
     "com.soupday.cc3_unity_tools": "https://github.com/soupday/cc_unity_tools_URP.git",

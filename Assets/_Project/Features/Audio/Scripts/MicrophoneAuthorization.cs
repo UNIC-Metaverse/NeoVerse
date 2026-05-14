@@ -63,7 +63,7 @@ namespace Fusion.Samples.IndustriesComponents
 
         protected async virtual Task RequestMicrophoneAccess()
         {
-#if !UNITY_EDITOR && UNITY_ANDROID || true
+#if !UNITY_EDITOR && UNITY_ANDROID
             Debug.Log("[Microphone] Validating access");
             bool micAccess = Permission.HasUserAuthorizedPermission(Permission.Microphone);
             if (!micAccess)
