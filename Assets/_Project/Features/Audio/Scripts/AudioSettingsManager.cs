@@ -100,7 +100,6 @@ namespace Fusion.Samples.IndustriesComponents
         // Set the Music volume and save the value into player settings according to the store parameter
         public void SetMusicVolume(float value, bool store = true)
         {
-            effectVolume = value;
             SetVolume(value, store, "Music Volume", "VolumeMusic");
         }
 
@@ -117,8 +116,8 @@ namespace Fusion.Samples.IndustriesComponents
         private void OnEnable()
         {
             if (managers == null) managers = Managers.FindInstance();
-            if (fusionVoiceClient == null) fusionVoiceClient = managers.fusionVoiceClient;
-            if (recorder == null) recorder = fusionVoiceClient.PrimaryRecorder;
+            if (fusionVoiceClient == null && managers != null) fusionVoiceClient = managers.fusionVoiceClient;
+            if (recorder == null && fusionVoiceClient != null) recorder = fusionVoiceClient.PrimaryRecorder;
             InitializeMasterVolume();
         }
 

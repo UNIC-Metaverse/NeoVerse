@@ -111,7 +111,7 @@ public class SessionEventsManager : MonoBehaviour, INetworkRunnerCallbacks
 
     public void OnShutdown(NetworkRunner runner, ShutdownReason shutdownReason) {
         Debug.LogError($"Shutdown : { shutdownReason} ");
-        soundManager.PlayOneShot("OnShutdown");
+        if (soundManager) soundManager.PlayOneShot("OnShutdown");
         if (onShutdown != null) onShutdown.Invoke(shutdownReason);
     }
 
