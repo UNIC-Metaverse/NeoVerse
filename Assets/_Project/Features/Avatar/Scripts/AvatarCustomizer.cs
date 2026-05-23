@@ -8,12 +8,13 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 /**
- * 
+ *
  * AvatarCustomizer is in charge to display the avatar selection UI.
  * It creates the UI dynamically based on the "Simple Avatar" model.
  * Avatar customization are saved/restored using player preference settings.
- * As start, it display the Simple Avatar or the ReadyPlayerMe panel according to avatar model found in player preference settings.
- * 
+ * At start, it displays the Simple Avatar or the Avaturn panel according to
+ * the avatar model URL found in player preference settings.
+ *
  **/
 
 namespace Fusion.Samples.IndustriesComponents
@@ -42,6 +43,12 @@ namespace Fusion.Samples.IndustriesComponents
         public GameObject vrModeConnectButton;
 
         public TabButtonUI tabButtonSimpleAvatar;
+
+        [Header("Avaturn")]
+        [Tooltip("Tab button that activates the Avaturn avatar panel")]
+        public TabButtonUI tabButtonAvaturn;
+        [Tooltip("The panel component that manages the Avaturn customiser UI")]
+        public AvaturnAvatarPanel avaturnPanel;
 
         public string latestSimpleAvatarURL;
 
@@ -82,6 +89,9 @@ namespace Fusion.Samples.IndustriesComponents
 
             if (tabButtonSimpleAvatar)
                 tabButtonSimpleAvatar.onTabSelected.AddListener(SimpleAvatarTabSelected);
+
+            if (tabButtonAvaturn)
+                tabButtonAvaturn.onTabSelected.AddListener(AvaturnTabSelected);
         }
 
         void ActivateVRMode()
@@ -108,7 +118,7 @@ namespace Fusion.Samples.IndustriesComponents
 
         private void SimpleAvatarTabSelected()
         {
-            if (string.IsNullOrEmpty(latestSimpleAvatarURL) == false)
+            if (!string.IsNullOrEmpty(latestSimpleAvatarURL))
             {
                 avatarRepresentation.ChangeAvatar(latestSimpleAvatarURL);
             }
@@ -117,7 +127,11 @@ namespace Fusion.Samples.IndustriesComponents
                 simpleAvatarConfig = DefaultSimpleAvatar();
                 avatarRepresentation.ChangeAvatar(simpleAvatarConfig.URL);
             }
+        }
 
+        private void AvaturnTabSelected()
+        {
+            if (avaturnPanel) avaturnPanel.OnTabSelected();
         }
 
         private void Start()
@@ -241,39 +255,46 @@ namespace Fusion.Samples.IndustriesComponents
             return referenceAvatar.RandomAvatarConfig();
         }
 
-        // RestoreAvatarFromUserPref search the avatar URL in the player preferences.
-        // if found, the avatar is restored, else a new avatar config is created
+        // RestoreAvatarFromUserPref searches the avatar URL in the player preferences.
+        // If found the avatar is restored, otherwise a new random SimpleAvatar is created.
         private void RestoreAvatarFromUserPref()
         {
-
             string avatarURL = PlayerPrefs.GetString(UserInfo.SETTINGS_AVATARURL);
 
-            if (avatarURL != null && avatarURL != "")
+            if (!string.IsNullOrEmpty(avatarURL))
             {
                 if (SimpleAvatarConfig.IsValidURL(avatarURL))
                 {
-                    Debug.Log($"Simple Avatar URL detected : {avatarURL}");
-                    // previous avatar found, restore the previous avatar settings
+                    Debug.Log($"[AvatarCustomizer] Simple Avatar URL restored: {avatarURL}");
                     simpleAvatarConfig = SimpleAvatarConfig.FromURL(avatarURL);
                     avatarRepresentation.ChangeAvatar(simpleAvatarConfig.URL);
-
-                    // Activate the correct tab
                     tabButtonSimpleAvatar.OnClick();
+                }
+                else if (IsAvaturnUrl(avatarURL))
+                {
+                    Debug.Log($"[AvatarCustomizer] Avaturn URL restored: {avatarURL}");
+                    avatarRepresentation.ChangeAvatar(avatarURL);
+                    // Activate the Avaturn tab if it exists; the panel handles the preview
+                    if (tabButtonAvaturn) tabButtonAvaturn.OnClick();
                 }
                 else
                 {
+                    // Unknown URL type — load it and let AvatarRepresentation route it
+                    Debug.LogWarning($"[AvatarCustomizer] Unknown avatar URL type, attempting to load: {avatarURL}");
                     avatarRepresentation.ChangeAvatar(avatarURL);
                 }
             }
             else
             {
-                Debug.LogError("Previous NOT avatar found, create a new avatar");
-                // previous NOT avatar found, create a new avatar
+                Debug.Log("[AvatarCustomizer] No saved avatar found — generating random SimpleAvatar.");
                 simpleAvatarConfig = DefaultSimpleAvatar();
                 avatarRepresentation.ChangeAvatar(simpleAvatarConfig.URL);
             }
-
         }
+
+        private static bool IsAvaturnUrl(string url) =>
+            !string.IsNullOrEmpty(url) &&
+            url.Contains("avaturn.me", System.StringComparison.OrdinalIgnoreCase);
 
         // Set the avatar hair mesh
         public void SetHairMesh(int val)
