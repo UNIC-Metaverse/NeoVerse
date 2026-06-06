@@ -71,6 +71,7 @@ namespace Fusion.Addons.HapticAndAudioFeedback
         {
             Sound s = SearchForSound(soundName);
             if (s == null) return;
+            if (!s.clip) { Debug.LogWarning($"[SoundManager] AudioClip for '{soundName}' is missing or destroyed."); return; }
 
             defaultSceneAudioSource.volume = s.volume;
             defaultSceneAudioSource.PlayOneShot(s.clip);
@@ -81,6 +82,7 @@ namespace Fusion.Addons.HapticAndAudioFeedback
         {
             Sound s = SearchForSound(soundName);
             if (s == null) return;
+            if (!s.clip) { Debug.LogWarning($"[SoundManager] AudioClip for '{soundName}' is missing or destroyed."); return; }
 
             if (audioSource == null)
             {
@@ -112,6 +114,7 @@ namespace Fusion.Addons.HapticAndAudioFeedback
         {
             Sound s = SearchForSound(soundName);
             if (s == null) return;
+            if (!s.clip) { Debug.LogWarning($"[SoundManager] AudioClip for '{soundName}' is missing or destroyed."); return; }
 
             int randomStartTime = UnityEngine.Random.Range(0, s.clip.samples - 1);
             if(audioSource == null)
@@ -128,6 +131,7 @@ namespace Fusion.Addons.HapticAndAudioFeedback
         {
             Sound s = SearchForSound(soundName);
             if (s == null) return;
+            if (!s.clip) { Debug.LogWarning($"[SoundManager] AudioClip for '{soundName}' is missing or destroyed."); return; }
 
             int randomStartTime = UnityEngine.Random.Range(0, s.clip.samples - 1);
 
