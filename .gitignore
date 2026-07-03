@@ -97,3 +97,11 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+# --- Credentials / API keys (per-developer, see docs/CREDENTIALS.md) ---
+# Real values must never be committed. Templates live in docs/credential-templates/.
+/Assets/_Project/Shared/Resources/ConvaiAPIKey.asset
+/Assets/_Project/Shared/Resources/ConvaiAPIKey.asset.meta
+/Assets/ThirdParty/Photon/Fusion/Resources/PhotonAppSettings.asset
+/Assets/ThirdParty/Photon/Fusion/Resources/PhotonAppSettings.asset.meta
+/Assets/ThirdParty/Photon/PhotonUnityNetworking/Resources/PhotonServerSettings.asset
+/Assets/ThirdParty/Photon/PhotonUnityNetworking/Resources/PhotonServerSettings.asset.meta

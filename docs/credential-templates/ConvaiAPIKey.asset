@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3402f41fb2bc77540b1edc3e8db81bce, type: 3}
   m_Name: ConvaiAPIKey
   m_EditorClassIdentifier: 
-  APIKey: e41f5d57027f2b87fa0413a9892b1e8a
+  APIKey: PASTE_YOUR_CONVAI_API_KEY_HERE
