@@ -1069,6 +1069,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3541039997558953735, guid: d94e8f7458ef70f429fa89f53a54d701, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5852840014569716355}
+    - targetCorrespondingSourceObject: {fileID: 3541039997558953735, guid: d94e8f7458ef70f429fa89f53a54d701, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 777987533357170392}
   m_SourcePrefab: {fileID: 100100000, guid: d94e8f7458ef70f429fa89f53a54d701, type: 3}
 --- !u!114 &1426818007477337966 stripped
 MonoBehaviour:
@@ -1270,6 +1273,18 @@ MonoBehaviour:
   recorder: {fileID: 0}
   fusionVoiceClient: {fileID: 0}
   muteMode: 0
+--- !u!114 &777987533357170392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3324855200190524763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3b7d9e1889fd0e4fa580457a0ab4cec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3387296008990071503 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3459354863550816403, guid: d94e8f7458ef70f429fa89f53a54d701, type: 3}

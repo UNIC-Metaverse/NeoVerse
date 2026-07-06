@@ -4031,6 +4031,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 858657830}
   m_CullTransparentMesh: 1
+--- !u!1 &888231375 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4403603214171361315, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+  m_PrefabInstance: {fileID: 1570040980}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &906136082
 GameObject:
   m_ObjectHideFlags: 0
@@ -7991,6 +7996,10 @@ PrefabInstance:
       propertyPath: rigInfo
       value: 
       objectReference: {fileID: 399848588}
+    - target: {fileID: 4403603213830381276, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+      propertyPath: field of view
+      value: 70
+      objectReference: {fileID: 0}
     - target: {fileID: 4403603214171361312, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -8068,7 +8077,13 @@ PrefabInstance:
     - {fileID: 537491824510791009, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4403603214171361315, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1916935599}
+    - targetCorrespondingSourceObject: {fileID: 4403603214171361315, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1916935600}
   m_SourcePrefab: {fileID: 100100000, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
 --- !u!23 &1578384830 stripped
 MeshRenderer:
@@ -10048,12 +10063,71 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4403603214171361314, guid: 332fda1eff2cb6c48bc735d13f2565ea, type: 3}
   m_PrefabInstance: {fileID: 1570040980}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 888231375}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16eb8d554c636c9479b4cfc59dbdf775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1916935599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888231375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9662ee4589db4ca48b43b77b67d2c590, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseXAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: a73f19a9-2c5c-44be-a6e2-f73195826ff1
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  mouseYAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 659ce979-651f-4852-84ad-a8cfd0bcb8b3
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  forceRotation: 0
+  rig: {fileID: 0}
+  maxMouseInput: {x: 40, y: 40}
+  maxHeadRotationSpeed: 30
+  sensitivity: {x: 15, y: 15}
+  maxHeadAngle: 65
+  minHeadAngle: 65
+  clampYaw: 1
+  maxYawAngle: 45
+--- !u!114 &1916935600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888231375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1c6b46dcf37b244eabc3b72c66a4ca7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseCamera: {fileID: 1916935599}
+  alwaysOnLookInDesktop: 0
 --- !u!1001 &1941845735
 PrefabInstance:
   m_ObjectHideFlags: 0
