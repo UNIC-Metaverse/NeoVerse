@@ -118,10 +118,12 @@ public class ScreenSharingEmitter : MonoBehaviour
         get { return _desktopIndex; }
         set { 
                 _desktopIndex = value;
+#if UWC_EMITTER_ENABLED
                 if(captureHost)
                 {
                     captureHost.DesktopIndex = _desktopIndex;
                 }
+#endif
             }
     }
 
