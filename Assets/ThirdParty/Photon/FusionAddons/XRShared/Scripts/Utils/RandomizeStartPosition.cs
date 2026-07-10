@@ -65,12 +65,20 @@ namespace Fusion.XR.Shared
             int tries = 0;
             if (startCenterPosition == null) startCenterPosition = transform;
 
+            // CUSTOMISED (NeoVerse): during benchmarking (NEOVERSE_BENCHMARK define), force a fixed,
+            // deterministic spawn at the center (radius 0) so repeated runs start from the exact same
+            // position. Normal builds keep the inspector-configured randomRadius.
+            float effectiveRadius = randomRadius;
+#if NEOVERSE_BENCHMARK
+            effectiveRadius = 0f;
+#endif
+
             // try to 10 times to find a valid destination point near the random position
             bool positionFound = false;
 
             if (useNavMesh == false)
             {
-                Vector3 pos = startCenterPosition.position + randomRadius * Random.insideUnitSphere;
+                Vector3 pos = startCenterPosition.position + effectiveRadius * Random.insideUnitSphere;
                 pos = new Vector3(pos.x, startCenterPosition.position.y, pos.z);
                 transform.position = pos;
                 transform.rotation = startCenterPosition.rotation;
@@ -81,7 +89,7 @@ namespace Fusion.XR.Shared
             {   // use nav mesh to find a destination
                 while (tries < 10)
                 {
-                    Vector3 pos = startCenterPosition.position + randomRadius * Random.insideUnitSphere;
+                    Vector3 pos = startCenterPosition.position + effectiveRadius * Random.insideUnitSphere;
                     pos = new Vector3(pos.x, startCenterPosition.position.y, pos.z);
                     // check if a destination has been found near the random position
 
