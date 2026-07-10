@@ -77,11 +77,22 @@ Quest package id: `com.UNICMetaverse.Neoverse`.
 
 ## Open items / TODO
 
-- [ ] **Commit + push** the last batch on `main`: `ScreenSharingEmitter.cs`, `UNIC.unity`,
-      `PerformanceBenchmark.cs` (+ `.meta`), `README.md`, this `CLAUDE.md`. Then `git merge
-      main` into the `NeoVerse-Quest` worktree (its `PerformanceBenchmark.cs` /
-      `ScreenSharingEmitter.cs` already match main — `git checkout --` them first if the merge
-      complains, then merge).
+- [ ] **Finish merging `main` into the `NeoVerse-Quest` (android) worktree.** The android
+      worktree's uncommitted state was snapshotted to commit `81cb79e` (nothing lost), then a
+      `git merge main` was attempted and **aborted** because it conflicts:
+      - `UNIC.unity` — the git text-merge **duplicates the `Convai NPC Amelia` root** (main and
+        android each carry Amelia as a *different* PrefabInstance fileID → merged scene ends up
+        with two Amelias + a one-line `SceneRoots.m_Roots` conflict). Do **not** hand-merge the
+        YAML. Resolve in the **Quest Unity editor**: likely take `main`'s `UNIC.unity`
+        (`git checkout --theirs`) then re-apply android's ~60-line local scene edit from
+        `81cb79e` if it was deliberate, ensuring only **one** Amelia remains.
+      - `PerformanceBenchmark.cs` + `.meta` — add/add. Take **main**'s (`--theirs`): its `.cs`
+        is the same code with richer comments, and its `.meta` GUID (`39394052…`) should win so
+        both checkouts share one GUID (android's stray GUID was `64ceec44…`).
+      - `ProjectSettings.asset` auto-merged (verify platform bits didn't get crossed).
+      Consider configuring **UnityYAMLMerge** (smart merge) before retrying.
+- [ ] **Push** when ready: `main` is at `ec70d79` (unpushed), android worktree at `81cb79e`
+      (unpushed).
 - [ ] **Rotate the Convai API key and Photon App IDs** — the repo is public and was forked, so
       the previously-committed keys are exposed; untracking only stops future leaks. (User was
       handling this.)
