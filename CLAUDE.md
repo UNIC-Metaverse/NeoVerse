@@ -93,6 +93,25 @@ Quest package id: `com.UNICMetaverse.Neoverse`.
       Consider configuring **UnityYAMLMerge** (smart merge) before retrying.
 - [ ] **Push** when ready: `main` is at `ec70d79` (unpushed), android worktree at `81cb79e`
       (unpushed).
+- [ ] **Convai SDK update / Unity 6 — deferred (decided 2026-07-15).** Staying on Unity
+      **2022.3.62f2** for now; revisit when the focus shifts to **embodied AI**, since the newer
+      Convai SDK (release ~June 2026) requires **Unity 6**. Facts established:
+      - Convai is **vendored**, not a package: a `.unitypackage` unpacked into
+        `Assets/ThirdParty/Convai/` (~409 MB). Its `package.json` has **only a `samples` block —
+        no `name`/`version`**, so it can't appear in Package Manager and carries **no version
+        marker**. Updating therefore means **replacing the vendored tree**, which would wipe any
+        `CUSTOMISED (NeoVerse)` edits inside it — diff before/after. Same for Fusion/PhotonVoice.
+      - `ConvaiAPIKey.asset` lives at `Assets/_Project/Shared/Resources/`, is **gitignored +
+        untracked**, and its key **is populated** in this checkout. Folder-duplicates carry it;
+        **clones do not**.
+      - Unity 6 trial was on a folder duplicate and was **abandoned after a >15 min load without
+        confirming any errors** — so "Fusion breaks on Unity 6" is **unverified**. A long first
+        load is expected (fresh `Library`, weaver, thousands of reimports). Fusion is **2.0.5
+        build 920 (Feb 2025)**, which postdates Unity 6, so it's a weak suspect. Stronger
+        candidates: Convai's **`Grpc.Core`** stack (discontinued upstream, 124 MB of native
+        libs), `uWindowCapture` (Win-only native), `cc3_unity_tools`, Ready Player Me.
+      - Next time: let the import finish and capture the actual console/`Editor.log` before
+        diagnosing.
 - [ ] **Rotate the Convai API key and Photon App IDs** — the repo is public and was forked, so
       the previously-committed keys are exposed; untracking only stops future leaks. (User was
       handling this.)
