@@ -107,6 +107,16 @@ Quest package id: `com.UNICMetaverse.Neoverse`.
 
 ## Notes / gotchas
 
+- **FMOD was removed** (was ~291 MB, unused): no `.bank` files, no code references, and 0
+  build-scene dependencies — audio runs through Unity `AudioSource` + AudioMixer via
+  `SoundManager`. Photon Voice ships an optional FMOD integration (`PhotonVoice/Code/FMOD`,
+  `PhotonVoiceApi/Platforms/FMOD`) whose asmdefs are gated on **`PHOTON_VOICE_FMOD_ENABLE`**;
+  that define had to be removed from **Standalone** *before* deleting the plugin or the desktop
+  build breaks (Android never had it — the Quest build already compiled without it). Those
+  Photon integration folders are left in place but are inert with the define off. Stale
+  `PHOTON_VOICE_FMOD_*` defines still sit on **non-targeted** platform groups (PS4/Switch/
+  WebGL/iOS/tvOS/…) — harmless, and unreachable via the `PlayerSettings` API because those
+  platform modules aren't installed. Re-adding FMOD means restoring the define first.
 - Active Input Handling is **Both**; the project runs on the **new Input System** (Convai's
   `ConvaiInputManager` uses the new path via `#elif`; legacy code is dormant). Switching to
   New-only is safe but not required.
