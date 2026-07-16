@@ -45,6 +45,23 @@ Build scenes (in order): `AvatarSelection` → `UNIC` → `UnicReceptionArea` �
 - **`DesktopMenuLook.cs`** — on the `AvatarSelection` `HardwareRig`. In desktop mode disables
   the camera's `TrackedPoseDriver` (which otherwise fights mouse-look and caused stutter) and
   enables `MouseCamera`; in VR it disables `MouseCamera`. Look is clamped to ±45°.
+- **`NavMeshGroundClamp.cs`** — on the UNIC `DesktopRig`. Snaps the rig onto the **NavMesh**
+  (where the crowd NPCs walk) instead of the invisible ProBuilder `Teleportation Nav` colliders
+  it would otherwise stand on. Those colliders don't line up with the visible floor and the rig
+  drives the **networked avatar**, so the mismatch is visible to *other* players. `Open Area` is
+  one 181×41 m polyshape spanning footpath + plaza and can't follow the plaza's slope, so **no
+  rigid transform offset fixes it** (measured: footpath ≈0.0, plaza 0.07–0.46 m *below* the
+  NavMesh) — hence a runtime clamp. `maxSnapDistance` **0.5** must sit between the worst plaza
+  error (~0.46) and the drop from un-baked geometry such as the stairs (~0.97), which are
+  excluded so the player doesn't sink through them. `downwardOnly` is **off** (the rig needs
+  lifting). Proper fix one day: edit the plaza-region vertices in ProBuilder.
+- **`DesktopViewingHeight.cs`** — Standing/Seated eye height for desktop, stored in the
+  `ViewingHeight` PlayerPref (mirrors the `RigMode` pref pattern) so the choice can be made once
+  in `AvatarSelection` and applies in every space after. Standing **1.74** (≈1.85 m person),
+  Seated **1.2**; both inspector-tunable. Moves only the camera — the rig still stands on the
+  ground, so avatar feet stay planted. **No-ops in VR** (`XRSettings.isDeviceActive`): there the
+  tracked pose owns the camera and XROrigin zeroes the Camera Offset in Floor mode. Wire a UI
+  Toggle to `SetSeated(bool)`, or buttons to `SetSeated()` / `SetStanding()`.
 - **`PerformanceBenchmark.cs`** — cross-platform benchmark harness, **gated behind the
   `NEOVERSE_BENCHMARK` scripting define** (off by default). Self-bootstraps; F8 on
   desktop/tethered, auto-start ~12 s on Quest; 6 s warm-up + 60 s spin sweep; writes
@@ -112,6 +129,23 @@ Quest package id: `com.UNICMetaverse.Neoverse`.
         libs), `uWindowCapture` (Win-only native), `cc3_unity_tools`, Ready Player Me.
       - Next time: let the import finish and capture the actual console/`Editor.log` before
         diagnosing.
+- [ ] **Tune the desktop eye height** — `DesktopViewingHeight.standingEyeHeight` is **1.74**
+      (≈1.85 m stature) and tested as "a little too high". Try ~1.60–1.65. Note desktop users are
+      typically *seated at a monitor*, so Seated may want to be the default rather than Standing.
+- [ ] **AvatarSelection UI for Seated/Standing** — the runtime side is done
+      (`DesktopViewingHeight`); only the menu control is missing. Drop the component on the
+      AvatarSelection menu and wire a Toggle → `SetSeated(bool)` (or buttons →
+      `SetSeated()` / `SetStanding()`). It records the pref even with no camera to move.
+- [ ] **`Teleportation Nav / Open Area` plaza vertices** — the polyshape sits 0.07–0.46 m *below*
+      the NavMesh over MAIN PLAZA while the footpath section is correctly aligned. Same object, so
+      the transform can't fix both; needs ProBuilder vertex editing on the plaza region.
+      `NavMeshGroundClamp` compensates at runtime in the meantime.
+- [ ] **11 stripped plaza materials** (`Spaces/UNIC/Scenes/UNIC/Materials/` — Grass, Dirt,
+      concrete, Metal, the White/Gray Paint set, + `UnicReceptionArea/Materials/Grid 1`). They
+      referenced the AmbientCG texture packs deleted in `b65ab1c`, so Unity nulled every texture
+      slot. **Harmless** — none are on a renderer or in any build-scene dependency — but if they
+      are ever wanted for plaza work, restore the maps from `b65ab1c~1`, or delete the `.mat`
+      files to finish the cleanup.
 - [ ] **Rotate the Convai API key and Photon App IDs** — the repo is public and was forked, so
       the previously-committed keys are exposed; untracking only stops future leaks. (User was
       handling this.)
